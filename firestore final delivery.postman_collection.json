@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "164270b2-4ea6-41d6-85f8-4ce230faced8",
+		"name": "firestore final delivery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "myapp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/crudrestapi/us-central1/api1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crudrestapi",
+						"us-central1",
+						"api1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 4,\n  \"firstName\": \"admin\",\n  \"lastName\": \"xd\",\n  \"email\": \"adm@dummy.me\",\n  \"price\": 900000000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-crudrestapi.cloudfunctions.net/v1/api/create",
+					"protocol": "https",
+					"host": [
+						"us-central1-crudrestapi",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"v1",
+						"api",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 4,\n  \"firstName\": \"asdffsad\",\n  \"lastName\": \"xd\",\n  \"email\": \"adm@dummy.me\",\n  \"price\": 90000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-crudrestapi.cloudfunctions.net/v1/api/update/4",
+					"protocol": "https",
+					"host": [
+						"us-central1-crudrestapi",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"v1",
+						"api",
+						"update",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"my asdfasfxdname updated\",\n\t\"description\": \"haey there it works updated\",\n\t\"price\": 233\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-crudrestapi.cloudfunctions.net/v1/api/delete/4",
+					"protocol": "https",
+					"host": [
+						"us-central1-crudrestapi",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"v1",
+						"api",
+						"delete",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read:specific",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://us-central1-crudrestapi.cloudfunctions.net/v1/api/read/4",
+					"protocol": "https",
+					"host": [
+						"us-central1-crudrestapi",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"v1",
+						"api",
+						"read",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read:all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://us-central1-crudrestapi.cloudfunctions.net/v1/api/read?page=2&limit=3",
+					"protocol": "https",
+					"host": [
+						"us-central1-crudrestapi",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"v1",
+						"api",
+						"read"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
